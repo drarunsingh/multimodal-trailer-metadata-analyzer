@@ -1,4 +1,4 @@
-# 🎬 Multimodal Trailer Metadata Analyzer
+#  Multimodal Trailer Metadata Analyzer
 
 **Netflix-style multimodal ML system** that ingests movie trailers (YouTube or local),
 extracts video and subtitle signals, and predicts **genre, mood, and themes**
@@ -11,6 +11,8 @@ Streaming platforms face weak or incomplete metadata for new content, which nega
 Built a Netflix-style multimodal machine learning system that ingests movie trailers (local files or YouTube URLs) and automatically generates genre, mood, and theme metadata using video and subtitle signals.
 
 ## System Overview
+![System Architecture](architecture diagram.png)
+
 - Subtitle extraction using Whisper  
 - Video embeddings using VideoMAE  
 - Text embeddings using Sentence-BERT  
