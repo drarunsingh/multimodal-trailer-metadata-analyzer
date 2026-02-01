@@ -11,7 +11,7 @@ Streaming platforms face weak or incomplete metadata for new content, which nega
 Built a Netflix-style multimodal machine learning system that ingests movie trailers (local files or YouTube URLs) and automatically generates genre, mood, and theme metadata using video and subtitle signals.
 
 ## System Overview
-![System Architecture](architecture diagram.png)
+![System Architecture](architecture_diagram.png)
 
 - Subtitle extraction using Whisper  
 - Video embeddings using VideoMAE  
