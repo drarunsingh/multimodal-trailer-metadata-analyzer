@@ -44,3 +44,34 @@ Emphasis was placed on system robustness rather than raw accuracy due to limited
 
 ## Interview Positioning Statement
 “I build production-oriented ML systems that transform raw media into structured, trustworthy signals for discovery, ranking, and personalization.”
+
+## Failure Cases & Limitations
+
+- **Noisy or missing subtitles**  
+  Whisper transcription errors can reduce text embedding quality, which impacts downstream predictions.
+
+- **Music-heavy or dialogue-light trailers**  
+  When subtitles contain little semantic content, the model relies more heavily on video embeddings.
+
+- **Small dataset size**  
+  With a limited number of labeled trailers, there is a risk of overfitting and optimistic evaluation scores.
+
+- **Threshold sensitivity in multi-label prediction**  
+  Fixed probability thresholds may not generalize well across different genres or moods.
+
+---
+
+## Key Trade-Offs & Design Decisions
+
+- **Pre-trained embeddings vs end-to-end training**  
+  Used VideoMAE and Sentence-BERT to enable faster iteration and stable performance on small datasets, at the cost of task-specific fine-tuning.
+
+- **Concatenation-based fusion vs attention-based fusion**  
+  Simple concatenation was chosen as a strong, interpretable baseline with fewer failure modes before exploring more complex fusion strategies.
+
+- **Resolution normalization (360p)**  
+  Normalizing video resolution improves inference stability and compute efficiency, but may discard fine-grained visual details.
+
+- **Model simplicity vs expressiveness**  
+  A lightweight classifier improves interpretability and debuggability, while leaving room for future architectural upgrades.
+
