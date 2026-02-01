@@ -17,3 +17,28 @@ Built a Netflix-style multimodal machine learning system that ingests movie trai
 - Multimodal fusion via concatenation  
 - Multi-label classifier with sigmoid outputs  
 - Deployed via Streamlit demo
+
+## Evaluation
+Multi-label classification evaluated using Micro and Macro F1 scores (~0.95 on a curated dataset).  
+Emphasis was placed on system robustness rather than raw accuracy due to limited dataset size.
+
+## Core Skills Demonstrated
+- Multimodal ML (video + text)
+- Metadata enrichment & weak labels
+- PyTorch training pipelines
+- Multi-label evaluation metrics
+- Robust inference and deployment
+
+## Engineering Strengths
+- Production-minded ingestion (YouTube, ffmpeg)
+- Modular codebase and clean structure
+- Model trade-off reasoning (compute vs accuracy)
+- Failure analysis and scalability planning
+## Where This Would Be Used in Production
+- Content discovery & search relevance
+- Cold-start ranking for new titles
+- Merchandising rows (mood/theme-based collections)
+- Editorial decision support
+
+## Interview Positioning Statement
+“I build production-oriented ML systems that transform raw media into structured, trustworthy signals for discovery, ranking, and personalization.”
